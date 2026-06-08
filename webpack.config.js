@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    publicPath: isProd ? '/ahj-goblin-game2/' : '/',
+    publicPath: '/ahj-goblin-game2/',
     clean: true,
   },
   devtool: 'source-map',
