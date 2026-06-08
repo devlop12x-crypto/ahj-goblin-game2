@@ -1,0 +1,186 @@
+/* =====================
+   Сброс
+   ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+   Body — как в прошлом задании
+   ===================== */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #34495e;
+  gap: 16px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* =====================
+   Статистика
+   ===================== */
+.stats {
+  display: flex;
+  gap: 32px;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ecf0f1;
+  opacity: 0.7;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1c40f;
+}
+
+.stat-value.misses {
+  color: #e74c3c;
+}
+
+/* =====================
+   Игровое поле — оригинал из прошлого задания
+   ===================== */
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 120px);
+  gap: 5px;
+  background-color: #9b59b6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* =====================
+   Ячейка — оригинал
+   ===================== */
+.cell {
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.cell.has-goblin {
+  cursor: url(/13a1f943d9743c5e1c72.svg) 16 16, crosshair;
+}
+
+.cell.hit-flash {
+  background-color: #e74c3c;
+}
+
+/* =====================
+   Гоблин — оригинал
+   ===================== */
+.goblin {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  animation: goblin-appear 0.15s ease;
+}
+
+@keyframes goblin-appear {
+  0%   { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* =====================
+   Кнопки
+   ===================== */
+.controls {
+  display: flex;
+}
+
+.btn-start,
+.btn-restart {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #9b59b6;
+  background: transparent;
+  color: #ecf0f1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-start:hover,
+.btn-restart:hover {
+  background: #9b59b6;
+  color: #fff;
+}
+
+.btn-start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =====================
+   Модальное окно
+   ===================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-window {
+  background: #2c3e50;
+  border: 2px solid #9b59b6;
+  border-radius: 10px;
+  padding: 40px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  color: #ecf0f1;
+}
+
+.modal-score {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+}
+
+.modal-score span {
+  color: #f1c40f;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+
+/*# sourceMappingURL=style.88375345d689dbc35f17.css.map*/
