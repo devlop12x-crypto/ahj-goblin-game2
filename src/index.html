@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-Goblin</title>
+  </head>
+  <body>
+    <div class="stats">
+      <div class="stat-block">
+        <span class="stat-label">Счёт</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-label">Промахи</span>
+        <span class="stat-value misses" id="misses">0 / 5</span>
+      </div>
+    </div>
+
+    <main id="board"></main>
+
+    <div class="controls">
+      <button class="btn-start" id="btn-start">Начать игру</button>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <div class="modal-window">
+        <h2 class="modal-title">Игра окончена!</h2>
+        <p class="modal-score">Ваш счёт: <span id="final-score">0</span></p>
+        <button class="btn-restart" id="btn-restart">Играть снова</button>
+      </div>
+    </div>
+  </body>
+</html>
